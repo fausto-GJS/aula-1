@@ -1,3 +1,33 @@
+/*
+
+----------------------------
+*jogo de par ou impar jogando contra o PC (PC roubando o jogo)*
+-----------------------------
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+  int numero, computador,soma;
+printf("Digite 0 para PAR e 1 para IMPAR\n");
+scanf("%d",&numero);
+srand(time(NULL));
+computador = rand()%10;
+soma = numero+computador;
+if(soma%2 == 0){
+soma++;
+if(soma%2 == 0){
+printf("Eu ganhei = %d ",soma);
+}else{
+printf("O computador ganhou = %d",soma);
+}
+}
+}
+
+
+----------------------------
+*jogo de par ou impar jogando contra o PC*
+-----------------------------
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -17,8 +47,6 @@ printf("O computador ganhou = %d",soma);
 }
 
 
-
-/*
 ----------------------------
 *jogo de par ou impar individual*
 -----------------------------
@@ -33,10 +61,11 @@ printf("PAR\n");
 else
 printf("IMPAR\n");
 }
+
+
 -----------------------------
 *comando Hello World*
 -----------------------------
-
 #include <stdio.h>
 
 int main(void) {
